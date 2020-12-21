@@ -1,0 +1,83 @@
+﻿body {
+    height: 100vh;
+    /* スクロール */
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+
+    background-image: url("/homepage/maguro.png");
+}
+
+body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+
+div#base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin: auto;
+    width: 90vw;
+    max-width: 120vh;
+    height:90vh;
+    background-color: rgba(245, 245, 245, 0.811);
+}
+
+div#sidebar {
+    /* 中央指定 */
+    position: relative;
+    margin: auto;
+    /* その他 */
+    width: 100%;
+    height: 10%;
+}
+    div#sidebar > ul {
+        /* 中央指定 */
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0;
+        /* その他 */
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+        div#sidebar > ul > li {
+            position: relative;
+            display: inline-block;
+            font-size: 2em;
+            flex-grow: 1;
+        }
+
+            div#sidebar > ul > li > a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: auto;
+                /* 中央寄せ */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                color: gray;
+                text-decoration: none;
+            }
+
+iframe#main {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+}
