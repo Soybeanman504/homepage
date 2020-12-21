@@ -1,1 +1,1 @@
-location.href = '/homepage/index.html'
+location.href = '/homepage/'
