@@ -1,1 +1,2 @@
-location.href = '/homepage/'
+var path = location.pathname;
+location.href = '/homepage/?path=' + path;
