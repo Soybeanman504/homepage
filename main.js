@@ -1,7 +1,15 @@
+// ・クエリを読み込んでURLを治す(リダイレクト用)
+// ・そのクエリに応じてiframeをいじる
+// ・aタグが有効になるたびにhrefを読み込んで適切なURLにする
+// ・他は特になし
 var queries = getUrlQueries();
 var path = queries.path;
 
 history.replaceState('','',path);
+
+var iframe = document.getElementById('mainframe');
+
+iframe.src = path + 'main.html';
 
 function getUrlQueries() {
     var queryStr = window.location.search.slice(1);  // 文頭?を除外
