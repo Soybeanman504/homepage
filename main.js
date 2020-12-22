@@ -1,5 +1,5 @@
 var queries = getUrlQueries();
-var path = queriies.path;
+var path = queries.path;
 
 history.replaceState('','',path);
 
