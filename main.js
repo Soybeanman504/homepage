@@ -9,6 +9,7 @@ history.replaceState('','',path);
 
 var iframe = document.getElementById('mainframe');
 
+console.log(iframe);
 iframe.src = path + 'main.html';
 
 function getUrlQueries() {
