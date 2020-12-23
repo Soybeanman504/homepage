@@ -13,10 +13,10 @@
 <div id="base">
     <div id="sidebar">
         <ul>
-            <li><a href="javascript:onLinkClick('/homepage/home/main.html');" target="mainframe">HOME</a></li>
+            <li><a href="javascript:function(){onLinkClick('/homepage/home/main.html')};" target="mainframe">HOME</a></li>
             <li><a href="javascript:onLinkClick('/homepage/art/main.html');" target="mainframe">ART</a></li>
             <li><a href="javascript:onLinkClick('/homepage/blog/main.html');" target="mainframe">BLOG</a></li>
-            <li><a href="javascript:window.onLinkClick('/homepage/other/main.html');" target="mainframe">OTHER</a></li>
+            <li><a href="javascript:onLinkClick('/homepage/other/main.html');" target="mainframe">OTHER</a></li>
         </ul>
     </div>
     <iframe id="mainframe" name="mainframe" src="/homepage/home/main.html" frameborder="0"></iframe>
