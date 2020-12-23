@@ -5,13 +5,21 @@
 var queries = getUrlQueries();
 var path = queries.path;
 
-history.replaceState('','',path);
-
 window.onload = function(){
-  var iframe = document.getElementById('mainframe');
+  mainframeChange(path);
+}
 
-  console.log(iframe);
+function onlinkClick(path) {
+  mainframeChange(path);
+}
+
+function mainframeChange(path) {
+  history.replaceState('','',path);
+
+  var iframe = document.getElementById('mainframe');
   iframe.src = path + 'main.html';
+
+  return iframe;
 }
 
 function getUrlQueries() {
