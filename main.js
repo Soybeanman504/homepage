@@ -9,7 +9,7 @@ window.onload = function(){
   mainframeChange(path);
 }
 
-function onlinkClick(path) {
+function onLinkClick(path) {
   mainframeChange(path);
 }
 
