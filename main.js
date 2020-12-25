@@ -8,7 +8,7 @@ window.onload = function(){
   var queries = getUrlQueries();
   var path = queries.path;
 
-  if (path != "") {
+  if (!path) {
     mainframeChange('mainframe', path);
   } else {
     mainframeChange('mainframe', 'home');
