@@ -15,7 +15,7 @@ window.onload = function(){
   }
 
   // リンク踏んだ時の対応
-  var clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
+  var clickEventType = ((window.ontouchstart!==null) ? 'click':'touchend');
   var links = document.getElementsByClassName('link');
   
   for(let n; n < links.length; n++){
@@ -24,6 +24,7 @@ window.onload = function(){
       mainframeChange(link.dataset.target, link.dataset.path);
     });
   }
+  console.log(link);
 }
 
 function mainframeChange(target, path) {
