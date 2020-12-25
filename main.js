@@ -16,14 +16,15 @@ window.onload = function(){
 
   // iframeの変更に応じて色々変える
   var iframe = document.getElementById('mainframe');
-  
-  Object.defineProperty(iframe, 'src', {get: () => value,
+  var value = iframe.src;
+
+  Object.defineProperty(iframe, 'src', {
+    get: () => value,
     set: newValue => {
       const oldValue = value;
       value = newValue;
       
-      let path = iframe.src;
-      iframeChange('mainframe', path.slice(0, path.lastIndexOf('/') + 1));
+      iframeChange('mainframe', value.slice(0, value.lastIndexOf('/') + 1));
     },
     configurable: true
   });
