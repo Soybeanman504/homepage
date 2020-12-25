@@ -10,11 +10,13 @@ window.onload = function(){
 
   if (path != "") {
     mainframeChange('mainframe', path);
+  } else {
+    mainframeChange('mainframe', 'home');
   }
 
   // リンク踏んだ時の対応
   var clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
-  var links = document.getElementByClassName('link');
+  var links = document.getElementsByClassName('link');
   
   for(let n; n < links.length; n++){
     let link = links[n];
