@@ -23,7 +23,7 @@ window.onload = function(){
     set: newValue => {
       const oldValue = value;
       value = newValue;
-      
+      console.log(value, oldValue, newValue);
       iframeChange('mainframe', value.slice(0, value.lastIndexOf('/') + 1));
     },
     configurable: true
