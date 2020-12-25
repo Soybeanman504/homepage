@@ -7,7 +7,7 @@ window.onload = function(){
   // リダイレクト後
   var queries = getUrlQueries();
   var path = queries.path;
-
+  console.log(path);
   if (!path) {
     mainframeChange('mainframe', path);
   } else {
