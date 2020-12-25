@@ -11,7 +11,7 @@ window.onload = function(){
   if (path) {
     mainframeChange('mainframe', path);
   } else {
-    mainframeChange('mainframe', 'home');
+    mainframeChange('mainframe', '/homepage/home/');
   }
 
   // リンク踏んだ時の対応
