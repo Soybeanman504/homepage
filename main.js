@@ -11,7 +11,7 @@ window.onload = function(){
   if (path) {
     mainframeChange('mainframe', path);
   } else {
-    mainframeChange('mainframe', '/homepage/home/');
+    mainframeChange('mainframe', '/homepage/home/main.html');
   }
 
   // リンク踏んだ時の対応
@@ -31,7 +31,7 @@ function mainframeChange(target, path) {
   history.replaceState('','',path);
 
   var iframe = document.getElementById(target);
-  iframe.src = path + 'main.html';
+  iframe.src = path;
 
   return iframe;
 }
