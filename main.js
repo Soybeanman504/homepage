@@ -15,7 +15,7 @@ window.onload = function(){
   }
 
   // iframeの変更に応じて色々変える
-  Object.definePropety(iframe, 'src', {get: () => value,
+  Object.defineProperty(iframe, 'src', {get: () => value,
     set: newValue => {
       const oldValue = value;
       value = newValue;
