@@ -2,21 +2,32 @@
 // ・そのクエリに応じてiframeをいじる
 // ・aタグが有効になるたびにhrefを読み込んで適切なURLにする
 // ・他は特になし
-var queries = getUrlQueries();
-var path = queries.path;
 
 window.onload = function(){
-  mainframeChange(path);
+  // リダイレクト後
+  var queries = getUrlQueries();
+  var path = queries.path;
+
+  if (path != "") {
+    mainframeChange('mainframe', path);
+  }
+
+  // リンク踏んだ時の対応
+  var clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
+  var links = document.getElementByClassName('link');
+  
+  for(let n; n < links.length; n++){
+    let link = links[n];
+    link.addEventListener(clickEventType, function(){
+      mainframeChange(link.dataset.target, link.dataset.path);
+    });
+  }
 }
 
-function onLinkClick(path) {
-  mainframeChange(path);
-}
-
-function mainframeChange(path) {
+function mainframeChange(target, path) {
   history.replaceState('','',path);
 
-  var iframe = document.getElementById('mainframe');
+  var iframe = document.getElementById(target);
   iframe.src = path + 'main.html';
 
   return iframe;
@@ -40,4 +51,3 @@ function getUrlQueries() {
   
   return queries;
 }
-  

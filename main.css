@@ -54,7 +54,7 @@ div#sidebar {
             flex-grow: 1;
         }
 
-            div#sidebar > ul > li > a {
+            div#sidebar > ul > li > p.link {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -65,10 +65,15 @@ div#sidebar {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                
-                color: gray;
-                text-decoration: none;
             }
+
+p {
+    color: black;
+}
+
+p.link {
+    color: gray;
+}
 
 iframe#mainframe {
     top: 0;
