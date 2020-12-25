@@ -23,8 +23,8 @@ window.onload = function(){
     link.addEventListener(clickEventType, function(){
       mainframeChange(link.dataset.target, link.dataset.path);
     });
+    console.log(link);
   }
-  console.log(link);
 }
 
 function mainframeChange(target, path) {
