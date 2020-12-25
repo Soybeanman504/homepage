@@ -9,10 +9,23 @@ window.onload = function(){
   var path = queries.path;
   console.log(path);
   if (path) {
-    mainframeChange('mainframe', path);
+    iframeChange('mainframe', path);
   } else {
-    mainframeChange('mainframe', '/homepage/home/');
+    iframeChange('mainframe', '/homepage/home/');
   }
+
+  // iframeの変更に応じて色々変える
+  Object.definePropety(iframe, 'src', {get: () => value,
+    set: newValue => {
+      const oldValue = value;
+      value = newValue;
+      
+      let iframe = document.getElementById('mainframe');
+      let path = iframe.src;
+      iframeChange('mainframe', path.slice(0, path.lastIndexOf('/') + 1));
+    },
+    configurable: true
+  });
 
   // リンク踏んだ時の対応
   var clickEventType = ((window.ontouchstart!==null) ? 'click':'touchend');
@@ -22,12 +35,12 @@ window.onload = function(){
   for(let n = 0; n < links.length; n++){
     let link = links[n];
     link.addEventListener(clickEventType, function(){
-      mainframeChange(link.dataset.target, link.dataset.path);
+      iframeChange(link.dataset.target, link.dataset.path);
     });
   }
 }
 
-function mainframeChange(target, path) {
+function iframeChange(target, path) {
   history.replaceState('','',path);
 
   var iframe = document.getElementById(target);
