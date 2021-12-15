@@ -14,7 +14,7 @@ class Icon extends React.Component {
   render() {
     return (
       <div className="icon">
-        <img src={"/homepage/img/" + this.props.src} />
+        <img src={"https://raw.githubusercontent.com/Soybeanman504/homepage/master/img/" + this.props.src} />
       </div>
     );
   }
