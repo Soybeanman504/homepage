@@ -1,12 +1,23 @@
-import logo from './logo.svg';
+import { render } from '@testing-library/react';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h2>わ</h2>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Icon src={"test.png"} />
+    );
+  }
+}
+
+class Icon extends React.Component {
+  render() {
+    return (
+      <div className="icon">
+        <img src={"/homepage/img/" + this.props.src} />
+      </div>
+    );
+  }
 }
 
 export default App;
