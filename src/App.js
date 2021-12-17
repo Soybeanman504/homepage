@@ -6,10 +6,10 @@ import Col from 'react-bootstrap/Col';
 
 class App extends React.Component {
   render() {
-    let iconNames = ["alice.png", "camera.gif", "city.png", "flandre scarlet.gif", "hinanawi-tenshi-B.gif", "kirisame marisa3.png", "kirisame marisa4.png", "koishi2.png", "maguro.png", "marisa.png", "Rumia.png", "sea-chicken.png", "sheep.png", "tamatsukuri_misumaru.png", "test.png", "yamame2.png", "yorigami_shion.gif", "yuuka2.png"];
-    let colLefts = [];
-    let colRights = [];
+    let colLefts = ["alice.png","flandre scarlet.gif","kirisame marisa3.png","kirisame marisa4.png","maguro.png","Rumia.png","sheep.png","test.png","yorigami_shion.gif"];
+    let colRights = ["camera.gif","city.png","hinanawi-tenshi-B.gif","koishi2.png","marisa.png","sea-chicken.png","tamatsukuri_misumaru.png","yamame2.png","yuuka2.png"];
 
+    /*
     for (let n = 0; n < iconNames.length; n++) {
       let iconName = iconNames[n];
       if (n % 2) {
@@ -18,6 +18,7 @@ class App extends React.Component {
         colLefts.push(iconName);
       }
     }
+    */
 
     return (
       <Row>
