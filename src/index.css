@@ -15,20 +15,20 @@ body {
   height: auto;
 }
 
-.row > .col-6 {
+.row>.col-6 {
   padding: 0;
 }
 
-.col-left > .icon {
+.col-left>.icon {
   margin-right: 8px;
 }
 
-.col-right > .icon {
+.col-right>.icon {
   margin-left: 8px;
 }
 
 #root {
-  width: min(100vh, 100%);
+  width: min(100vh, 95%);
 
   background-color: ghostwhite;
 }
