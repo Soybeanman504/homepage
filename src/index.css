@@ -15,14 +15,27 @@ body {
   height: auto;
 }
 
+.row > .col-6 {
+  padding: 0;
+}
+
+.col-left > .icon {
+  margin-right: 8px;
+}
+
+.col-right > .icon {
+  margin-left: 8px;
+}
+
 #root {
   width: min(100vh, 100%);
-  
-  background-color:ghostwhite;
+
+  background-color: ghostwhite;
 }
 
 .icon {
   position: relative;
+  margin: 16px;
 }
 
 .iconImage {
@@ -34,24 +47,21 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  top:0px;
+  top: 0px;
   background-color: ghostwhite;
 
   animation: zoom-out-anim 1s;
-	transform: translate(0%,50%) scale(1,0);
+  transform: translate(0%, 50%) scale(1, 0);
 }
 
 @keyframes zoom-out-anim {
-	0% {
-	transform: translate(0%,0%) scale(1,1);
-	}
-	100% {
-	transform: translate(0%,50%),scale(1,0);
-	}
-}
+  0% {
+    transform: translate(0%, 0%) scale(1, 1);
+  }
 
-.col-6 {
-  padding: 16px;
+  100% {
+    transform: translate(0%, 50%), scale(1, 0);
+  }
 }
 
 code {
