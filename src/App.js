@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 class App extends React.Component {
   render() {
     let colLefts = ["alice.png","flandre scarlet.gif","hinanawi-tenshi-B.gif","kirisame marisa4.png","maguro.png","Rumia.png","sheep.png","tamatsukuri_misumaru.png","test.png","yamame2.png","yuuka2.png"];
-    let colRight = ["camera.gif","city.png","hakurei_reimu.png","kirisame marisa3.png","koishi2.png","marisa.png","sea-chicken.png","small-raimu.png","tenshi.png","yorigami_shion.gif","zourimushi.png"];
+    let colRights = ["camera.gif","city.png","hakurei_reimu.png","kirisame marisa3.png","koishi2.png","marisa.png","sea-chicken.png","small-raimu.png","tenshi.png","yorigami_shion.gif","zourimushi.png"];
 
     /*
     for (let n = 0; n < iconNames.length; n++) {
